@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 
+import { toggleTheme } from "../store/actions";
+
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-
-import { toggleTheme } from "../../store/actions";
 
 function ThemeToggler() {
   const dispatch = useDispatch();
