@@ -4,6 +4,8 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import CssBaseline from "@mui/material/CssBaseline";
 
+import Modal from "./Modal";
+
 function App() {
   const themeState = useSelector((state) => state.theme);
   const theme = useMemo(
@@ -14,6 +16,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Modal />
     </ThemeProvider>
   );
 }
