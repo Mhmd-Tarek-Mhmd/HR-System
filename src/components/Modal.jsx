@@ -2,15 +2,15 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { closeModal } from "../store/actions";
 
-import DialogMui from "@mui/material/Dialog";
+import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 
-function Dialog() {
+function Modal() {
   const dispatch = useDispatch();
   const { isOpen, title, desc, cb, children, Comp } = useSelector(
-    (state) => state.dialog
+    (state) => state.modal
   );
 
   const handleClose = () => dispatch(closeModal());
@@ -22,7 +22,7 @@ function Dialog() {
 
   return (
     isOpen && (
-      <DialogMui open onClose={handleClose}>
+      <Dialog open onClose={handleClose}>
         {title && <DialogTitle>{title}</DialogTitle>}
         <DialogContent>
           {desc && (
@@ -30,9 +30,9 @@ function Dialog() {
           )}
           {Comp ? <Comp handleSubmit={handleSubmit} /> : children}
         </DialogContent>
-      </DialogMui>
+      </Dialog>
     )
   );
 }
 
-export default Dialog;
+export default Modal;
