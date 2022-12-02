@@ -6,6 +6,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 import Modal from "./Modal";
 import Feedback from "./Feedback";
+import Main from "../layouts/Main";
 
 const contrastText = "#fff";
 const paletteMui = {
@@ -40,6 +41,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Main />
       <Modal />
       <Feedback />
     </ThemeProvider>
