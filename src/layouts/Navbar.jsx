@@ -25,7 +25,13 @@ function Navbar() {
       <Container maxWidth={false}>
         <Toolbar
           disableGutters
-          sx={{ justifyContent: "flex-end", alignItems: "center" }}
+          sx={{
+            pt: 1,
+            rowGap: 1,
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "flex-end",
+          }}
         >
           <Typography
             sx={{
