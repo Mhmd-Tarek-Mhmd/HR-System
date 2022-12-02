@@ -1,4 +1,5 @@
-import { themeSlice } from "./slices/theme";
+import { toggleTheme } from "./slices/theme";
+import { openModal, closeModal } from "./slices/modal";
 import { add, update, remove } from "./slices/employees";
 
-export { themeSlice, add, update, remove };
+export { toggleTheme, openModal, closeModal, add, update, remove };
