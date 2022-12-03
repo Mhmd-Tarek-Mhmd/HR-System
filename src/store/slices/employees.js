@@ -6,7 +6,8 @@ const employeesSlice = createSlice({
   name: "employees",
   initialState,
   reducers: {
-    add: (state, action) => [...state, action.payload],
+    add: (state, action) =>
+      state ? [...state, action.payload] : [action.payload],
     update: (state, action) =>
       state.map((a) => (a.id === action.payload.id ? action.payload : a)),
     remove: (state, action) => state.filter((a) => a.id !== action.payload),
