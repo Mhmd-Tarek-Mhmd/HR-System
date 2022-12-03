@@ -74,7 +74,7 @@ function Navbar() {
           {/* User */}
           <Select
             value={users[0].name}
-            sx={{ "*": { border: "none" } }}
+            sx={{ "& *": { border: "none" } }}
             inputProps={{
               sx: {
                 p: 1,
