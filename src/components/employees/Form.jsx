@@ -1,7 +1,13 @@
 import { useReducer } from "react";
 import { useDispatch } from "react-redux";
 
-import { openBackdrop, closeBackdrop, add, update } from "../../store/actions";
+import {
+  add,
+  update,
+  openAlert,
+  openBackdrop,
+  closeBackdrop,
+} from "../../store/actions";
 
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -70,6 +76,12 @@ function Form({ employeeProp, updateEmployees, handleCloseModal }) {
     const action = employeeProp ? update : add;
     dispatch(action(employee));
     updateEmployees && updateEmployees(employee);
+    dispatch(
+      openAlert(
+        "success",
+        `Employee ${employeeProp ? "updated" : "added"} successfully`
+      )
+    );
 
     handleCloseModal();
     let timer = setTimeout(() => {
