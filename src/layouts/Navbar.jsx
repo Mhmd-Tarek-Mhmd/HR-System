@@ -21,7 +21,7 @@ const users = [
 
 function Navbar() {
   return (
-    <Box component="nav" sx={{ height: 80 }}>
+    <Box component="nav" sx={{ height: { xs: 120, sm: 80 } }}>
       <Container maxWidth={false}>
         <Toolbar
           disableGutters
@@ -36,6 +36,7 @@ function Navbar() {
           <Typography
             sx={{
               mr: 6.125,
+              display: { xs: "none", md: "block" },
               color: ({ palette }) => palette.mode === "light" && "#474747",
             }}
           >
@@ -74,7 +75,6 @@ function Navbar() {
           {/* User */}
           <Select
             value={users[0].name}
-            sx={{ "& *": { border: "none" } }}
             inputProps={{
               sx: {
                 p: 1,

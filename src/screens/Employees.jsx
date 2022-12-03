@@ -45,7 +45,6 @@ function Employees() {
       component="section"
       sx={{
         pt: 4,
-        height: 1,
         backgroundColor: ({ palette }) => palette.mode === "light" && "#f7f8f9",
       }}
     >
